@@ -4,6 +4,8 @@ import os
 import numpy as np
 from config import Config
 from utils.metrics import calculate_mae, calculate_pcc, calculate_rmse
+import seaborn as sns
+from sklearn.metrics import confusion_matrix
 
 def save_comparison_plot(clean_data, masked_input, recon_data, mask, epoch, model_name, mode_name):
     """
@@ -60,3 +62,21 @@ def save_comparison_plot(clean_data, masked_input, recon_data, mask, epoch, mode
     plt.savefig(save_path, bbox_inches='tight')
     plt.close()
     return save_path
+
+
+
+
+def plot_clinical_comparison(results_dict, class_names, save_path):
+    """
+    results_dict: {'Original': (y_true, y_pred), 'Baseline': (...), 'Ours': (...)}
+    """
+    fig, axes = plt.subplots(1, 3, figsize=(18, 5))
+    for i, (name, (y_true, y_pred)) in enumerate(results_dict.items()):
+        cm = confusion_matrix(y_true, y_pred, normalize='true')
+        sns.heatmap(cm, annot=True, fmt='.2f', ax=axes[i], cmap='Blues',
+                    xticklabels=class_names, yticklabels=class_names)
+        axes[i].set_title(f"Diagnosis: {name}")
+    
+    plt.tight_layout()
+    plt.savefig(save_path)
+    print(f">> 临床一致性对比图已保存至: {save_path}")

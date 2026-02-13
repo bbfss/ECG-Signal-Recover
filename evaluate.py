@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 # 基础配置与工具导入
 from config import Config
-from utils.metrics import calculate_mae, calculate_rmse, calculate_pcc, calculate_prd
+from utils.metrics import calculate_mae, calculate_rmse, calculate_pcc, calculate_prd, calculate_pre  # 新增这一行
 from utils.ptbxl_loader import get_ptbxl_evaluate_loader
 from utils.ludb_loader import get_ludb_evaluate_loader
 
@@ -30,6 +30,7 @@ METRICS_TO_CALC = {
     "RMSE": calculate_rmse,
     "PCC": calculate_pcc,
     "PRD": calculate_prd,
+    "PRE": calculate_pre,  # 新增这一行
 }
 
 def get_eval_models(device):

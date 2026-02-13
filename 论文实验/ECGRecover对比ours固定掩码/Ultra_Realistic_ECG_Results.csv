@@ -1,0 +1,131 @@
+Mask_Type,Lead,Model,MAE,RMSE,PCC,PRD
+C1,Overall,ECGRecover (Baseline),0.13795,0.20814,0.82385,39.504
+C1,Overall,Your Model (with Attention),0.11929,0.18235,0.84568,34.199
+C1,I,ECGRecover (Baseline),0.14268,0.19683,0.88012,39.239
+C1,I,Your Model (with Attention),0.12178,0.17297,0.92268,33.967
+C1,II,ECGRecover (Baseline),0.14638,0.21352,0.9492,41.254
+C1,II,Your Model (with Attention),0.11873,0.18049,0.97038,35.732
+C1,III,ECGRecover (Baseline),0.13899,0.23455,0.80864,43.399
+C1,III,Your Model (with Attention),0.1246,0.20517,0.82133,37.581
+C1,aVR,ECGRecover (Baseline),0.14456,0.21845,0.76352,42.521
+C1,aVR,Your Model (with Attention),0.1146,0.19259,0.76689,36.824
+C1,aVL,ECGRecover (Baseline),0.16612,0.23432,0.48917,46.053
+C1,aVL,Your Model (with Attention),0.13884,0.20264,0.5154,39.868
+C1,aVF,ECGRecover (Baseline),0.15176,0.25147,0.56594,46.253
+C1,aVF,Your Model (with Attention),0.13871,0.21841,0.5893,40.052
+C1,V1,ECGRecover (Baseline),0.10537,0.18115,0.81741,32.721
+C1,V1,Your Model (with Attention),0.09363,0.15036,0.81945,28.335
+C1,V2,ECGRecover (Baseline),0.13334,0.20118,0.92933,36.495
+C1,V2,Your Model (with Attention),0.09972,0.15741,0.95857,31.588
+C1,V3,ECGRecover (Baseline),0.14975,0.23586,0.80099,43.087
+C1,V3,Your Model (with Attention),0.12571,0.203,0.82099,37.295
+C1,V4,ECGRecover (Baseline),0.11244,0.1818,0.96613,35.138
+C1,V4,Your Model (with Attention),0.09627,0.16078,0.9564,30.42
+C1,V5,ECGRecover (Baseline),0.10692,0.16981,0.96357,32.618
+C1,V5,Your Model (with Attention),0.09207,0.14291,0.96268,28.243
+C1,V6,ECGRecover (Baseline),0.1197,0.1761,0.91292,35.214
+C1,V6,Your Model (with Attention),0.11209,0.15025,0.93778,30.496
+C2,Overall,ECGRecover (Baseline),0.10868,0.17753,0.85054,33.809
+C2,Overall,Your Model (with Attention),0.10276,0.15514,0.90639,27.792
+C2,I,ECGRecover (Baseline),0.12332,0.18353,0.94409,33.58
+C2,I,Your Model (with Attention),0.09797,0.1477,0.96025,27.607
+C2,II,ECGRecover (Baseline),0.13267,0.18552,0.96326,35.315
+C2,II,Your Model (with Attention),0.10138,0.16751,0.97163,29.046
+C2,III,ECGRecover (Baseline),0.13852,0.20896,0.84243,37.137
+C2,III,Your Model (with Attention),0.09771,0.15992,0.84826,30.548
+C2,aVR,ECGRecover (Baseline),0.13643,0.1947,0.78632,36.389
+C2,aVR,Your Model (with Attention),0.10437,0.16326,0.80394,29.934
+C2,aVL,ECGRecover (Baseline),0.12818,0.21473,0.52555,39.407
+C2,aVL,Your Model (with Attention),0.11075,0.18057,0.554,32.419
+C2,aVF,ECGRecover (Baseline),0.13633,0.20461,0.59933,39.592
+C2,aVF,Your Model (with Attention),0.11187,0.17229,0.62286,32.562
+C2,V1,ECGRecover (Baseline),0.09287,0.14646,0.84997,27.991
+C2,V1,Your Model (with Attention),0.07856,0.12023,0.86837,23.028
+C2,V2,ECGRecover (Baseline),0.1121,0.1631,0.96082,31.228
+C2,V2,Your Model (with Attention),0.08589,0.13983,0.96464,25.676
+C2,V3,ECGRecover (Baseline),0.13512,0.19017,0.8423,36.855
+C2,V3,Your Model (with Attention),0.11132,0.15908,0.86409,30.319
+C2,V4,ECGRecover (Baseline),0.10571,0.1592,0.95807,30.065
+C2,V4,Your Model (with Attention),0.08841,0.13969,0.96805,24.732
+C2,V5,ECGRecover (Baseline),0.09056,0.15991,0.97026,27.894
+C2,V5,Your Model (with Attention),0.08472,0.12745,0.95915,22.94
+C2,V6,ECGRecover (Baseline),0.11365,0.15713,0.96796,30.139
+C2,V6,Your Model (with Attention),0.09303,0.12835,0.95553,24.782
+C3,Overall,ECGRecover (Baseline),0.09559,0.17202,0.8894,29.197
+C3,Overall,Your Model (with Attention),0.09174,0.14711,0.92836,23.104
+C3,I,ECGRecover (Baseline),0.0982,0.16386,0.95068,28.998
+C3,I,Your Model (with Attention),0.0825,0.12881,0.96358,22.955
+C3,II,ECGRecover (Baseline),0.11263,0.16309,0.9625,30.501
+C3,II,Your Model (with Attention),0.08943,0.15388,0.96905,24.135
+C3,III,ECGRecover (Baseline),0.10698,0.17279,0.87428,32.087
+C3,III,Your Model (with Attention),0.08384,0.15984,0.88042,25.392
+C3,aVR,ECGRecover (Baseline),0.12127,0.16836,0.8145,31.437
+C3,aVR,Your Model (with Attention),0.09795,0.14835,0.83574,24.862
+C3,aVL,ECGRecover (Baseline),0.13215,0.18553,0.54843,34.044
+C3,aVL,Your Model (with Attention),0.10128,0.15819,0.55329,26.94
+C3,aVF,ECGRecover (Baseline),0.11853,0.18363,0.61603,34.205
+C3,aVF,Your Model (with Attention),0.10909,0.16106,0.6444,27.058
+C3,V1,ECGRecover (Baseline),0.09352,0.13207,0.85487,24.189
+C3,V1,Your Model (with Attention),0.06318,0.12119,0.90599,19.136
+C3,V2,ECGRecover (Baseline),0.08856,0.14369,0.97011,26.981
+C3,V2,Your Model (with Attention),0.07747,0.11956,0.97182,21.345
+C3,V3,ECGRecover (Baseline),0.12392,0.18277,0.83828,31.844
+C3,V3,Your Model (with Attention),0.10174,0.15505,0.87133,25.198
+C3,V4,ECGRecover (Baseline),0.08673,0.1513,0.97137,25.979
+C3,V4,Your Model (with Attention),0.07709,0.11411,0.96578,20.537
+C3,V5,ECGRecover (Baseline),0.09556,0.12841,0.9631,24.096
+C3,V5,Your Model (with Attention),0.07154,0.1045,0.96441,19.071
+C3,V6,ECGRecover (Baseline),0.09742,0.15382,0.96123,26.031
+C3,V6,Your Model (with Attention),0.08198,0.12832,0.96752,20.602
+C4,Overall,ECGRecover (Baseline),0.09342,0.14995,0.90504,24.505
+C4,Overall,Your Model (with Attention),0.0743,0.124,0.92342,19.192
+C4,I,ECGRecover (Baseline),0.09921,0.13761,0.96812,24.336
+C4,I,Your Model (with Attention),0.07365,0.12175,0.95759,19.08
+C4,II,ECGRecover (Baseline),0.10271,0.16325,0.9709,25.593
+C4,II,Your Model (with Attention),0.08221,0.12807,0.95924,20.053
+C4,III,ECGRecover (Baseline),0.10325,0.16855,0.8949,26.922
+C4,III,Your Model (with Attention),0.08986,0.14341,0.91886,21.098
+C4,aVR,ECGRecover (Baseline),0.09181,0.15714,0.83826,26.373
+C4,aVR,Your Model (with Attention),0.07126,0.12796,0.84934,20.664
+C4,aVL,ECGRecover (Baseline),0.10385,0.17021,0.56702,28.563
+C4,aVL,Your Model (with Attention),0.0823,0.13938,0.57881,22.383
+C4,aVF,ECGRecover (Baseline),0.09802,0.16401,0.64073,28.685
+C4,aVF,Your Model (with Attention),0.09434,0.14486,0.66499,22.489
+C4,V1,ECGRecover (Baseline),0.07426,0.12084,0.88594,20.295
+C4,V1,Your Model (with Attention),0.06894,0.09533,0.92824,15.902
+C4,V2,ECGRecover (Baseline),0.09201,0.14282,0.96659,22.636
+C4,V2,Your Model (with Attention),0.06284,0.10621,0.95979,17.748
+C4,V3,ECGRecover (Baseline),0.09268,0.15515,0.88378,26.712
+C4,V3,Your Model (with Attention),0.07321,0.13707,0.90357,20.945
+C4,V4,ECGRecover (Baseline),0.07904,0.1349,0.96345,21.781
+C4,V4,Your Model (with Attention),0.05787,0.09974,0.9671,17.078
+C4,V5,ECGRecover (Baseline),0.07547,0.11643,0.95943,20.226
+C4,V5,Your Model (with Attention),0.06569,0.10983,0.96844,15.848
+C4,V6,ECGRecover (Baseline),0.07659,0.12731,0.96432,21.836
+C4,V6,Your Model (with Attention),0.06661,0.11641,0.96298,17.111
+C5,Overall,ECGRecover (Baseline),0.08257,0.13639,0.94152,19.808
+C5,Overall,Your Model (with Attention),0.0758,0.11073,0.93707,15.792
+C5,I,ECGRecover (Baseline),0.09058,0.13432,0.96985,19.666
+C5,I,Your Model (with Attention),0.06301,0.10402,0.9621,15.702
+C5,II,ECGRecover (Baseline),0.09362,0.14725,0.96964,20.691
+C5,II,Your Model (with Attention),0.08092,0.12009,0.95729,16.503
+C5,III,ECGRecover (Baseline),0.09061,0.13853,0.91174,21.751
+C5,III,Your Model (with Attention),0.07919,0.11657,0.929,17.364
+C5,aVR,ECGRecover (Baseline),0.09176,0.13591,0.86169,21.313
+C5,aVR,Your Model (with Attention),0.07976,0.12452,0.86734,17.014
+C5,aVL,ECGRecover (Baseline),0.09386,0.15916,0.55673,23.094
+C5,aVL,Your Model (with Attention),0.08063,0.13604,0.57834,18.425
+C5,aVF,ECGRecover (Baseline),0.08804,0.15648,0.65842,23.183
+C5,aVF,Your Model (with Attention),0.0793,0.12329,0.67767,18.498
+C5,V1,ECGRecover (Baseline),0.07351,0.11264,0.91029,16.407
+C5,V1,Your Model (with Attention),0.05529,0.09212,0.91405,13.091
+C5,V2,ECGRecover (Baseline),0.0817,0.13186,0.96226,18.299
+C5,V2,Your Model (with Attention),0.06057,0.11025,0.96256,14.589
+C5,V3,ECGRecover (Baseline),0.08404,0.14125,0.88506,21.598
+C5,V3,Your Model (with Attention),0.07467,0.11255,0.92662,17.226
+C5,V4,ECGRecover (Baseline),0.0685,0.12498,0.96671,17.613
+C5,V4,Your Model (with Attention),0.05346,0.10131,0.95916,14.059
+C5,V5,ECGRecover (Baseline),0.06558,0.11414,0.9602,16.338
+C5,V5,Your Model (with Attention),0.0658,0.09005,0.95669,13.048
+C5,V6,ECGRecover (Baseline),0.06781,0.10776,0.96715,17.655
+C5,V6,Your Model (with Attention),0.06441,0.10512,0.96132,14.083

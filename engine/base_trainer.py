@@ -12,8 +12,8 @@ class BaseTrainer:
         self.model_name = getattr(model, 'name', 'Unknown_Model')
         self.train_loader = train_loader
         self.val_loader = val_loader
-        
-        self.demo_sig_np = demo_sig 
+        self.demo_sig_np = demo_sig
+        self.device = Config.DEVICE 
         
         # 2. 准备 Tensor 格式，专门给模型推理用 (形状: [1, 12, 512])
         self.demo_sig_tensor = torch.from_numpy(demo_sig.T).float().unsqueeze(0).to(Config.DEVICE)

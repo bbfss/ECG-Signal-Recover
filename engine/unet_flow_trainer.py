@@ -18,8 +18,17 @@ class Unet_Flow_Trainer(BaseTrainer):
         self.l_weights = torch.ones(12).to(Config.DEVICE).float()
         self.l_weights[2] = 5.0; self.l_weights[5] = 5.0 
         
+        
+        # --- 修改前 ---
+        # self.cfm = ConditionalFlowMatcher(self.flow_net, Config.DEVICE, alpha=4.0, loss_weights=self.l_weights)
         # 初始化流匹配器
-        self.cfm = ConditionalFlowMatcher(self.flow_net, Config.DEVICE, alpha=4.0, loss_weights=self.l_weights)
+        # 将 loss_weights 移除，改为使用 gamma（如果你想控制峰值增强强度）
+        self.cfm = ConditionalFlowMatcher(
+            model=self.flow_net, 
+            device=Config.DEVICE, 
+            alpha=5.0,   # 建议使用 5.0 增强锐利度
+            gamma=2.0    # 峰值增强系数，值越大对 R 峰越敏感
+        )
         
         # 定义两个独立的优化器
         self.opt_unet = torch.optim.Adam(self.model.parameters(), lr=Config.LR)

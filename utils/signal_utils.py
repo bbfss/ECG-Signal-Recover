@@ -62,6 +62,52 @@ def apply_extended_mask(ecg_signal, missing_ratio=Config.MISSING_RATIO):
             mask[:, l] = 0
     return (ecg_signal * mask).astype(np.float32), mask
 
+import numpy as np
+import torch
+
+def apply_diagonal_mask(ecg_signal):
+    """
+    包装后的任务一：分段对角线掩码 (排除1等分)
+    逻辑：将导联和时间同时切割，每个时间块仅保留对应导联组的信号，其余用随机噪声填充。
+    
+    返回：
+    - masked_samples: 列表，包含多种切割方案生成的掩码信号 [SEQ_LEN, 12]
+    - original_labels: 列表，包含对应的原始信号 [SEQ_LEN, 12]
+    """
+    seq_len, num_leads = ecg_signal.shape
+    masked_samples = []
+    original_labels = []
+    
+    # 1. 寻找所有能整除 12 的约数，并排除 12 本身 (因为 12 // 12 = 1，即1等分)
+    # 12 的约数有 [1, 2, 3, 4, 6]，对应的等分数 num_group_leads 为 [12, 6, 4, 3, 2]
+    valid_divisors = [i for i in range(1, num_leads) if num_leads % i == 0]
+    
+    for size_group in valid_divisors:
+        num_groups = num_leads // size_group # 等分的组数
+        
+        # 导联切割点索引
+        lead_splits = list(range(0, num_leads + 1, size_group))
+        
+        # 时间维度切割点索引
+        t_step = seq_len // num_groups
+        time_splits = list(range(0, seq_len + 1, t_step))
+        time_splits[-1] = seq_len # 确保覆盖到 512
+        
+        # 生成带噪声的底图
+        masked_ecg = np.zeros_like(ecg_signal).astype(np.float32)
+        
+        # 对角线保留逻辑
+        for i in range(len(lead_splits) - 1):
+            l_start, l_end = lead_splits[i], lead_splits[i+1]
+            t_start, t_end = time_splits[i], time_splits[i+1]
+            
+            # 将对应时空块的信号替换为真实信号
+            masked_ecg[t_start:t_end, l_start:l_end] = ecg_signal[t_start:t_end, l_start:l_end]
+            
+        masked_samples.append(masked_ecg)
+        original_labels.append(ecg_signal)
+        
+    return original_labels,masked_samples
 
 class ECGDataset(Dataset):
     def __init__(self, x, y): 

@@ -1,0 +1,10 @@
+Mask_Type,Model,PRE (%) ↓
+Transient,ECGRecover,32.44042
+Transient,UNet_Stage,31.85214
+Transient,Unet_Flow,26.23021
+Extended,ECGRecover,34.087242
+Extended,UNet_Stage,32.62145
+Extended,Unet_Flow,27.080034
+Diagonal,ECGRecover,79.585556
+Diagonal,UNet_Stage,80.45231
+Diagonal,Unet_Flow,76.23293

@@ -68,7 +68,7 @@ conda activate pytorch
 
 - **EKGAN**`python train.py --model ekgan --dataset ptbxl`
 
-- **Unet + Flow**`python train.py --model unetflow --dataset ptbxl`
+- **Unet + Flow**`python recovers_train.py --model unetflow --dataset ptbxl`
 
 - **DeScoD (扩散模型)**`python train.py --model descod --dataset ptbxl`
 

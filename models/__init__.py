@@ -13,6 +13,6 @@ from .ekgan import EKGAN_Generator, EKGAN_Discriminator
 from .descod import DeScoD_ScoreNet
 
 # 6. 导出 ECG-Recover 类
-from .ecg_recover import ECGRecover
+from .ecg_recover_old import ECGRecover
 
 from .unet_moe_flow import MoEFlowNetwork  # 导入 MoE 版本的 Flow Network

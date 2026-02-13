@@ -17,6 +17,7 @@ class Config:
     CHECKPOINT_DIR = os.path.join(OUTPUT_DIR, "checkpoints")
     PLOT_DIR = os.path.join(OUTPUT_DIR, "vis_plots")
     METRICS_CSV = os.path.join(OUTPUT_DIR, "experiment_metrics.csv")
+    METRICS_DIR = os.path.join(OUTPUT_DIR, "metrics")
     # ================= 2. 全局通用训练参数 =================
     SEED = 42
     DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -29,14 +30,14 @@ class Config:
     SEQ_LEN = 512        # 训练送入网络的长度
     IN_CHANNELS = 12     # 默认 12 导联
     MISSING_RATIO = 0.3  # 掩码比例
-    SAMPLE_LIMIT = 1000    # 建议测试阶段设为 10-100，正式运行设为 None
-    EVALUATE_SAMPLE_LIMIT = 100  # 评估时的样本数量限制
+    SAMPLE_LIMIT = 2249    # 建议测试阶段设为 10-100，正式运行设为 None
+    EVALUATE_SAMPLE_LIMIT = 200  # 评估时的样本数量限制
 
     # ================= 3. 算法特有超参数 =================
     
     # --- Unet_Flow ---
-    UNET_EPOCHS = 40
-    FLOW_EPOCHS = 10
+    UNET_EPOCHS = 10
+    FLOW_EPOCHS = 40
     SAMPLE_STEPS = 30    
     
     # --- EKGAN ---
@@ -57,7 +58,11 @@ class Config:
     MAE_EPOCHS = 50
 
     # --- ECGRecover ---
-    RECOVER_EPOCHS = 50
+    RECOVER_EPOCHS = 100
+    
+    # --- Clinical Doctor (Classifier) ---
+    CLASSIFIER_EPOCHS = 50  # 医生模型建议训练 50 轮以保证诊断准确性
+    CLASSIFIER_LR = 1e-3 # 也可以直接用 Config.LR
 
 # 自动化目录创建
 for path in [Config.CHECKPOINT_DIR, Config.PLOT_DIR]:

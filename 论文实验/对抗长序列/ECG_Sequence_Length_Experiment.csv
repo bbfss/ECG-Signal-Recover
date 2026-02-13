@@ -1,0 +1,11 @@
+Sequence_Length,Model,MAE,RMSE,PCC
+512,Standard UNet,0.0407,0.0812,0.9159
+512,Ours (Mamba-Bridge),0.0365,0.0645,0.9494
+1024,Standard UNet,0.0465,0.0895,0.898
+1024,Ours (Mamba-Bridge),0.0378,0.0668,0.9461
+2048,Standard UNet,0.054,0.102,0.885
+2048,Ours (Mamba-Bridge),0.0392,0.0692,0.9422
+4096,Standard UNet,0.0615,0.115,0.871
+4096,Ours (Mamba-Bridge),0.0415,0.0721,0.9385
+5000,Standard UNet,0.0652,0.121,0.8623
+5000,Ours (Mamba-Bridge),0.0428,0.0745,0.9351
