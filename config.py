@@ -31,7 +31,7 @@ class Config:
     IN_CHANNELS = 12     # 默认 12 导联
     MISSING_RATIO = 0.3  # 掩码比例
     SAMPLE_LIMIT = 2249    # 建议测试阶段设为 10-100，正式运行设为 None
-    EVALUATE_SAMPLE_LIMIT = 200  # 评估时的样本数量限制
+    EVALUATE_SAMPLE_LIMIT = 2000  # 评估时的样本数量限制
 
     # ================= 3. 算法特有超参数 =================
     

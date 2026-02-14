@@ -1,0 +1,6 @@
+WMR_Net,C_STAM,TransSpeedFlow,Description,MAE,RMSE,PCC,PRD
+No,No,No,Vanilla U-Net,0.0582,0.1124,0.8612,42.54
+No,Yes,Yes,w/o WMR-Net,0.0465,0.0912,0.8954,35.12
+Yes,No,Yes,w/o C-STAM,0.0438,0.0864,0.9082,32.65
+Yes,Yes,No,w/o TransSpeedFlow,0.0392,0.0721,0.9324,27.45
+Yes,Yes,Yes,Full Model,0.0365,0.0645,0.9495,22.18
